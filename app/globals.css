@@ -25,3 +25,9 @@ body {
     text-wrap: balance;
   }
 }
+.MuiTableSortLabel-icon {
+  opacity: 1 !important; /* Ensures icons are always visible */
+}
+.custom-sort-icon {
+  color: rgba(0, 0, 0, 1) !important;
+}
