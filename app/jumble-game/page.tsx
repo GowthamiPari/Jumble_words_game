@@ -1428,9 +1428,9 @@ export default function JumbleGame() {
   const currentParticipant = selectedNames[currentIndex % selectedNames.length];
   const totalWords = Math.floor(words.length / selectedNames.length);
 
-  const sortedResults = results
-    .map(result => ({ ...result, time: result.time })) // Adjust time for display
-    .sort((a, b) => a.time - b.time);
+  // const sortedResults = results
+  //   .map(result => ({ ...result, time: result.time })) // Adjust time for display
+  //   .sort((a, b) => a.time - b.time);
 
   const totalParticipantsTimes = selectedNames.map(name => ({
     name,
@@ -1468,7 +1468,7 @@ export default function JumbleGame() {
     setShowActualWord(false);
     setGameState(false);
   };
-  const CustomCircularProgress = styled(CircularProgress)<{ timer: number }>(({ theme, timer }) => ({
+  const CustomCircularProgress = styled(CircularProgress)<{ timer: number }>(({  timer }) => ({
     position: 'relative',
     '& .MuiCircularProgress-circle': {
       stroke: timer <= 5 ? '#ff1744' : '#22c55e', // Red when timer <= 3, blue otherwise
