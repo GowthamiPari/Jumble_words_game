@@ -805,7 +805,7 @@ export default function JumbleGame() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const wordsRes = await fetch('/words150.json');
+      const wordsRes = await fetch('/words100.json');
       const namesRes = await fetch('/names.json');
       const wordsData = await wordsRes.json();
       const namesData = await namesRes.json();
@@ -1132,7 +1132,7 @@ export default function JumbleGame() {
           <div>
             {selectedNames.length > 0 && !gameStarted && !gameOver && (
               <h3 className="text-lg mb-4">
-                "Each participant will receive <span className=' font-bold'>{totalWords} words</span> to guess, and they will have <span className=' font-bold'>{time} seconds </span>to guess each word. 
+                "Each participant will receive <span className=' font-bold'>{totalWords} words</span> to guess, and they will have <span className=' font-bold underline'>{time} seconds </span>to guess each word. 
                 The name of the participant and the jumbled word will be displayed on the screen, so all participants must remain alert, 
                 as we cannot predict the order of names.
                 {/* Each participant will get {totalWords} words to guess, and they will have {time} seconds to guess each word. */}
